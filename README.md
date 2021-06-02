@@ -35,3 +35,53 @@ timer = BASICFONT.render(str('Play Time: ' + str(int(elapsed_time)) + ' sec'), T
 ### 디스플레이의 이름 변경   
 171번줄 `pygame.display.set_caption('2019018104 seojaehyeon')`  을 통해 디스플레이 이름 변경
 ### 블록의 색깔을 7가지 모양에 각각 할당하기   
+24~40 번줄을 통해 7가지 색깔과, 7가지 밝은 색의 RGB값을 저장, 46~47 번줄에 배열로 만들고   
+377~398 getNewPiece()함수를 통해 각각의 블록에 각각의 색깔을 할당하게 함.   
+    
+```python
+#24~40,46~47
+#               R    G    B
+WHITE       = (255, 255, 255)
+GRAY        = (185, 185, 185)
+BLACK       = (  0,   0,   0)
+RED         = (155,   0,   0)
+LIGHTRED    = (175,  20,  20)
+GREEN       = (  0, 155,   0)
+LIGHTGREEN  = ( 20, 175,  20)
+BLUE        = (  0,   0, 155)
+LIGHTBLUE   = ( 20,  20, 175)
+YELLOW      = (155, 155,   0)
+LIGHTYELLOW = (175, 175,  20)
+SKYBLUE     = (  0, 153, 244)
+LIGHTSKYBLUE= (204, 235, 255)
+PINK        = (255,102,255)
+LIGHTPINK   = (255,204,255)
+BROWN       = (102,51,0)
+LIGHTBROWN  = (255,217,179)
+
+
+COLORS      = (     BLUE,      GREEN,      RED,      YELLOW, SKYBLUE,PINK,BROWN)
+LIGHTCOLORS = (LIGHTBLUE, LIGHTGREEN, LIGHTRED, LIGHTYELLOW,LIGHTSKYBLUE,LIGHTPINK,LIGHTBROWN)
+
+#377 getNewPiece()
+if shape == 'S':
+        colors = 0
+    elif shape == 'Z':
+        colors = 1
+    elif shape == 'J':
+        colors = 2
+    elif shape == 'L':
+        colors = 3
+    elif shape == 'I':
+        colors = 4
+    elif shape == 'O':
+        colors = 5
+    elif shape == 'T':
+        colors = 6
+    newPiece = {'shape': shape,
+                'rotation': random.randint(0, len(PIECES[shape]) - 1),
+                'x': int(BOARDWIDTH / 2) - int(TEMPLATEWIDTH / 2),
+                'y': -2, # start it above the board (i.e. less than 0)
+                'color': colors}
+```
+
