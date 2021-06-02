@@ -5,7 +5,7 @@ https://inventwithpython.com/pygame/chapter7.html
 ### 배경음악을 세가지중 하나 재생
 174~181번줄에서 랜덤으로 노래를 하나 로드함.   
     
-```
+```python
     while True: # game loop   
         idx = random.randint(0, 2)   
         if idx == 0:   
