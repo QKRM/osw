@@ -35,7 +35,7 @@ timer = BASICFONT.render(str('Play Time: ' + str(int(elapsed_time)) + ' sec'), T
 ### 디스플레이의 이름 변경   
 171번줄 `pygame.display.set_caption('2019018104 seojaehyeon')`  을 통해 디스플레이 이름 변경   
 ### 블록의 색깔을 7가지 모양에 각각 할당하기   
-24~40 번줄을 통해 7가지 색깔과, 7가지 밝은 색의 RGB값을 저장, 46~47 번줄에 배열로 만들고   
+24~40 번줄을 통해 7가지 색깔과, 7가지 밝은 색의 RGB값을 저장. 46~47 번줄에 배열로 만들고   
 377~398 getNewPiece()함수를 통해 각각의 블록에 각각의 색깔을 할당하게 함.   
     
 ```python
